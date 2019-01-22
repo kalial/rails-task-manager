@@ -1,0 +1,23 @@
+<!--
+  https://www.railstutorial.org/book/updating_and_deleting_users
+
+  # We want to be able to edit a task, changing its title, its details and especially marking it as completed.
+ -->
+
+ <h1>My Task: <%= @task.title %></h1>
+
+
+<%= form_for @task do |f| %>
+
+  <%= f.label "Title" %>
+  <%= f.text_field :title %> <br>
+
+  <%= f.label "Details" %>
+  <%= f.text_field :details %> <br>
+
+  <%= f.label "Complete?" %>
+  <%= f.check_box :completed %> <br>
+
+  <%= f.submit %>
+
+<% end %>

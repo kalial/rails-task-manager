@@ -1,0 +1,19 @@
+<h1><%= @task.title %></h1>
+<h2><%= @task.details %></h2>
+
+<% if @task.completed? %>
+  <p > Status: completed </p>
+
+<% else %>
+  <p> Status: Incomplete </p>
+<% end %>
+
+<%= link_to "Edit this task ", edit_task_path %> <br>
+<%= link_to destroy_task_path(@task), method: :delete do %>
+ <i class="fas fa-trash"></i> <!-- https://fontawesome.com/icons?d=gallery&q=delete -->
+<% end %> <br>
+
+<%= link_to "Back to overview", tasks_path %>
+
+
+
